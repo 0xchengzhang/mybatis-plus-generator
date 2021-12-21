@@ -92,7 +92,7 @@ public class CodeGenerator {
         gc.setOutputDir(PROJECT_PATH + "/src/main/java");
         gc.setAuthor(AUTHOR);
         gc.setOpen(false);
-        gc.setServiceName("%sService");
+        gc.setServiceName("I%sService");
         gc.setBaseColumnList(true);
         mpg.setGlobalConfig(gc);
     }
@@ -119,7 +119,7 @@ public class CodeGenerator {
         // 指定自定义模板路径，注意不要带上.ftl/.vm, 会根据使用的模板引擎自动识别
         // 此处自定义了实体对象和mapper.xml，因为公司规范要求表名以t_开头，字段名以f_开头，所以做了特殊处理
 
-        String versionPath = "templates/v1/";
+        String versionPath = "templates/v2/";
         templateConfig.setController(versionPath + "controller.java");
         templateConfig.setService(versionPath + "service.java");
         templateConfig.setServiceImpl(versionPath + "serviceImpl.java");
